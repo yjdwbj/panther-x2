@@ -22,6 +22,7 @@ The [Panther X2](https://panther.global) has a 4-core high-performance processor
 |Power 	|●DC jack<br>●DC12V 1~1.5A|
 
 ![panther-x2.png](images/panther-x2.png)
+![panther-uart.png](images/panther-uart.png)
 
 * Releases:
   * [Kernel 6.9.4](#kernel-6.9.4)
