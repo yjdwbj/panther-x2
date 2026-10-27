@@ -1,0 +1,142 @@
+root@yjdwbj /data # ./rknn_benchmark_Linux/rknn_benchmark rknn_yolov8_demo/model/yolov8n.rknn "" 50
+rknn_api/rknnrt version: 2.5.0 (74ea630ce8@2026-09-30T09:41:17), driver version: 0.9.8
+total weight size: 3195456, total internal size: 6252800
+total dma used size: 11210752
+model input num: 1, output num: 9
+input tensors:
+  index=0, name=images, n_dims=4, dims=[1, 640, 640, 3], n_elems=1228800, size=1228800, w_stride = 640, size_with_stride=1228800, fmt=NHWC, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.003922
+output tensors:
+  index=0, name=318, n_dims=4, dims=[1, 64, 80, 80], n_elems=409600, size=409600, w_stride = 0, size_with_stride=409600, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-58, scale=0.117659
+  index=1, name=onnx::ReduceSum_326, n_dims=4, dims=[1, 80, 80, 80], n_elems=512000, size=512000, w_stride = 0, size_with_stride=512000, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.003104
+  index=2, name=331, n_dims=4, dims=[1, 1, 80, 80], n_elems=6400, size=6400, w_stride = 0, size_with_stride=51200, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.003173
+  index=3, name=338, n_dims=4, dims=[1, 64, 40, 40], n_elems=102400, size=102400, w_stride = 0, size_with_stride=102400, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-45, scale=0.093747
+  index=4, name=onnx::ReduceSum_346, n_dims=4, dims=[1, 80, 40, 40], n_elems=128000, size=128000, w_stride = 0, size_with_stride=128000, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.003594
+  index=5, name=350, n_dims=4, dims=[1, 1, 40, 40], n_elems=1600, size=1600, w_stride = 0, size_with_stride=12800, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.003627
+  index=6, name=357, n_dims=4, dims=[1, 64, 20, 20], n_elems=25600, size=25600, w_stride = 0, size_with_stride=30720, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-34, scale=0.083036
+  index=7, name=onnx::ReduceSum_365, n_dims=4, dims=[1, 80, 20, 20], n_elems=32000, size=32000, w_stride = 0, size_with_stride=38400, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.003874
+  index=8, name=369, n_dims=4, dims=[1, 1, 20, 20], n_elems=400, size=400, w_stride = 0, size_with_stride=3840, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.003922
+custom string:
+Warmup ...
+   0: Elapse Time = 28.48ms, FPS = 35.11
+   1: Elapse Time = 28.29ms, FPS = 35.35
+   2: Elapse Time = 28.40ms, FPS = 35.21
+   3: Elapse Time = 28.33ms, FPS = 35.30
+   4: Elapse Time = 28.47ms, FPS = 35.12
+Begin perf ...
+   0: Elapse Time = 28.86ms, FPS = 34.65
+   1: Elapse Time = 28.33ms, FPS = 35.29
+   2: Elapse Time = 28.29ms, FPS = 35.35
+   3: Elapse Time = 28.33ms, FPS = 35.30
+   4: Elapse Time = 28.34ms, FPS = 35.28
+   5: Elapse Time = 28.29ms, FPS = 35.35
+   6: Elapse Time = 28.33ms, FPS = 35.30
+   7: Elapse Time = 28.81ms, FPS = 34.71
+   8: Elapse Time = 28.33ms, FPS = 35.30
+   9: Elapse Time = 28.31ms, FPS = 35.33
+  10: Elapse Time = 28.34ms, FPS = 35.28
+  11: Elapse Time = 28.37ms, FPS = 35.25
+  12: Elapse Time = 28.38ms, FPS = 35.24
+  13: Elapse Time = 28.35ms, FPS = 35.27
+  14: Elapse Time = 28.32ms, FPS = 35.32
+  15: Elapse Time = 29.04ms, FPS = 34.44
+  16: Elapse Time = 28.37ms, FPS = 35.25
+  17: Elapse Time = 28.34ms, FPS = 35.29
+  18: Elapse Time = 28.30ms, FPS = 35.34
+  19: Elapse Time = 28.34ms, FPS = 35.29
+  20: Elapse Time = 28.37ms, FPS = 35.24
+  21: Elapse Time = 28.36ms, FPS = 35.26
+  22: Elapse Time = 28.62ms, FPS = 34.95
+  23: Elapse Time = 28.67ms, FPS = 34.87
+  24: Elapse Time = 28.38ms, FPS = 35.24
+  25: Elapse Time = 28.38ms, FPS = 35.23
+  26: Elapse Time = 28.33ms, FPS = 35.29
+  27: Elapse Time = 28.32ms, FPS = 35.32
+  28: Elapse Time = 28.38ms, FPS = 35.23
+  29: Elapse Time = 28.35ms, FPS = 35.28
+  30: Elapse Time = 29.08ms, FPS = 34.39
+  31: Elapse Time = 28.27ms, FPS = 35.37
+  32: Elapse Time = 28.29ms, FPS = 35.35
+  33: Elapse Time = 28.29ms, FPS = 35.35
+  34: Elapse Time = 28.30ms, FPS = 35.34
+  35: Elapse Time = 28.33ms, FPS = 35.30
+  36: Elapse Time = 28.29ms, FPS = 35.35
+  37: Elapse Time = 28.41ms, FPS = 35.19
+  38: Elapse Time = 29.09ms, FPS = 34.37
+  39: Elapse Time = 28.38ms, FPS = 35.23
+  40: Elapse Time = 28.34ms, FPS = 35.28
+  41: Elapse Time = 28.33ms, FPS = 35.30
+  42: Elapse Time = 28.35ms, FPS = 35.28
+  43: Elapse Time = 28.35ms, FPS = 35.27
+  44: Elapse Time = 28.36ms, FPS = 35.26
+  45: Elapse Time = 28.67ms, FPS = 34.88
+  46: Elapse Time = 28.52ms, FPS = 35.07
+  47: Elapse Time = 28.37ms, FPS = 35.24
+  48: Elapse Time = 28.36ms, FPS = 35.26
+  49: Elapse Time = 28.33ms, FPS = 35.30
+
+Avg Time 28.42ms, Avg FPS = 35.181
+
+Save output to rt_output0.npy
+Save output to rt_output1.npy
+Save output to rt_output2.npy
+Save output to rt_output3.npy
+Save output to rt_output4.npy
+Save output to rt_output5.npy
+Save output to rt_output6.npy
+Save output to rt_output7.npy
+Save output to rt_output8.npy
+---- Top5 ----
+10.120117 - 307209
+10.002441 - 102402
+10.002441 - 102410
+10.002441 - 108802
+9.884766 - 102409
+---- Top5 ----
+0.003103 - 0
+0.003103 - 1
+0.003103 - 2
+0.003103 - 3
+0.003103 - 4
+---- Top5 ----
+0.247410 - 0
+0.247410 - 1
+0.247410 - 2
+0.247410 - 3
+0.247410 - 4
+---- Top5 ----
+8.812500 - 78396
+8.812500 - 78397
+8.718750 - 78395
+8.718750 - 79995
+8.718750 - 79996
+---- Top5 ----
+0.003593 - 0
+0.003593 - 1
+0.003593 - 2
+0.003593 - 3
+0.003593 - 4
+---- Top5 ----
+0.286444 - 0
+0.286444 - 1
+0.286444 - 2
+0.286444 - 3
+0.286444 - 4
+---- Top5 ----
+7.473205 - 6414
+7.390169 - 6415
+7.307134 - 6814
+7.224098 - 6405
+7.224098 - 6413
+---- Top5 ----
+0.007748 - 26590
+0.003874 - 26569
+0.003874 - 26570
+0.003874 - 26571
+0.003874 - 26589
+---- Top5 ----
+0.007843 - 190
+0.003922 - 169
+0.003922 - 170
+0.003922 - 171
+0.003922 - 189
+
